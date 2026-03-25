@@ -70,7 +70,12 @@ const Projects = () => {
                 <div className="glass group rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(74,20,140,0.05)] hover:shadow-[0_20px_50px_rgba(74,20,140,0.1)] border border-gray-100/50 transition-all duration-500 bg-white/50 backdrop-blur-sm">
                   <div className="flex flex-col lg:flex-row">
                     {/* Project Image */}
-                    <div className="lg:w-2/5 h-64 lg:h-auto overflow-hidden relative group/img">
+                    <a 
+                      href={project.live} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="lg:w-2/5 h-64 lg:h-auto overflow-hidden relative group/img block"
+                    >
                       {project.image ? (
                         <img 
                           src={project.image} 
@@ -83,7 +88,7 @@ const Projects = () => {
                         </div>
                       )}
                       <div className="absolute inset-0 bg-brand-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
+                    </a>
                     
                     {/* Project Details */}
                     <div className="lg:w-3/5 p-8 md:p-12">
