@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #4a148c;
+  --color-brand-purple-light: #7c43bd;
+  --color-brand-purple-dark: #2d004d;
+  --color-brand-white: #ffffff;
+  --color-brand-gray: #f9fafb;
+
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 35s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-brand-white);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(74, 20, 140, 0.05);
+}
+
+.glass-dark {
+  background: rgba(74, 20, 140, 0.05);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(74, 20, 140, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(74, 20, 140, 0.1);
+}
